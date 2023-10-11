@@ -52,6 +52,22 @@ The classification of anime format ("TV," "Movie," "OAV," or "Unknown") is based
 #### User-Generated Data
 The data relies on user-generated ratings and votes, which may be influenced by individual preferences and bias. There is an inherent issue in gathering highly accurate information when polling people who are tied to very strong fanbases. For example, often times voters will vote an enemy franchise very poorly to skew the data and bolster their favorite IPs.
 
+## ANALYSIS
+
+To determine potential correlation between votes and rating, the Pearson's coefficient was found to be 0.419. A scatterplot was created to visualize the relationship.
+
+Peforming linear regression and overlaying a best-fit linear model over the scatterplot, it becomes more apparent that there exists a positive and approximately linear relationship between vote count and anime rating.
+
+The slope represents the change in the dependent variable (rating) for a one-unit change in the independent variable (votes). In this case, the slope is approximately 2.999e-05, which means that for every additional vote, the expected increase in rating is approximately 2.999e-05.
+
+The R^2 value measures the goodness of fit of the regression model. It indicates the proportion of the variance in rating that can be explained by vote count. An R-squared value of approximately 0.176 means that around 17.6% of the variability in rating can be explained by votes, which explains the points' varying degrees of proximity to the regression line.
+
+Finally, the p-value is used to assess the statistical significance of the relationship between votes and rating. In this case, the extremely low p-value of 6.540e-10 indicates a strong statistical significance, suggesting that there is some degree of correlation between vote count and rating.
+
+In summary, the linear regression analysis suggests that there is a statistically significant, but relatively weak, positive correlation between the number of votes and the rating of the data. Although the model's R^2 value indicates that a small proportion of the variability in rating can be explained by the number of votes, the extremely low p-value implicates a significant relationship between the variables. Therefore, vote count predicts rating with a moderate positive correlation.
+
+Possibly this project could offer insight into the broader relationship between the number of voters and ratings, not just with the anime industry but with other datasets that are user-generated. In the future, a follow-up study could potentially analyze the factor of popularity in other areas besides rating or perform the same study but on a different top 200 anime list (MyAnimeList, AniList, etc). 
+
 ## LICENSE
 
 Copyright 2023 joshhee
